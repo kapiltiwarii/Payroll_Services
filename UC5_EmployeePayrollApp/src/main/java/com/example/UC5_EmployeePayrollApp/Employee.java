@@ -1,9 +1,11 @@
-package com.example.UC4_EmployeePayrollApp;
+package com.example.UC5_EmployeePayrollApp;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-public class EmployeeDTO {
+public class Employee {
+
+    private Long id;
 
     @NotBlank(message = "Name cannot be empty")
     private String name;
@@ -15,16 +17,20 @@ public class EmployeeDTO {
     private String email;
 
     // Default Constructor
-    public EmployeeDTO() {}
+    public Employee() {}
 
     // Parameterized Constructor
-    public EmployeeDTO(String name, double salary, String email) {
+    public Employee(Long id, String name, double salary, String email) {
+        this.id = id;
         this.name = name;
         this.salary = salary;
         this.email = email;
     }
 
     // Getters and Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
