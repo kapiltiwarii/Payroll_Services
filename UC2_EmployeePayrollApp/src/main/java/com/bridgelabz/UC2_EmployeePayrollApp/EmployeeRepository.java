@@ -1,4 +1,4 @@
-package com.bridgelabz.EmployeePayrollApp;
+package com.bridgelabz.UC2_EmployeePayrollApp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
