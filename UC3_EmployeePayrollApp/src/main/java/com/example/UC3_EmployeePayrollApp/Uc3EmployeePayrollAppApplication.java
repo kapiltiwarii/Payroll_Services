@@ -1,13 +1,13 @@
-package com.bridgelabz.UC2_EmployeePayrollApp;
+package com.example.UC3_EmployeePayrollApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Uc2EmployeePayrollAppApplication {
+public class Uc3EmployeePayrollAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Uc2EmployeePayrollAppApplication.class, args);
+		SpringApplication.run(Uc3EmployeePayrollAppApplication.class, args);
 	}
 
 }
