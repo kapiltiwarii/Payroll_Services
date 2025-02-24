@@ -1,8 +1,6 @@
-package com.bridgelabz.UC2_EmployeePayrollApp;
+package com.example.UC3_EmployeePayrollApp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }
