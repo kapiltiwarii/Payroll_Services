@@ -1,4 +1,4 @@
-package com.example.UC3_EmployeePayrollApp;
+package com.example.UC4_EmployeePayrollApp;
 
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
@@ -14,18 +14,21 @@ public class EmployeeController {
 
     private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
+    // Service Layer Dependency Injected using @Autowired
     @Autowired
-    private EmployeeService service;
+    private EmployeeService employeeService;
 
+    // Add Employee - Delegates to Service Layer
     @PostMapping
     public EmployeeDTO createEmployee(@Valid @RequestBody EmployeeDTO employeeDTO) {
         logger.info("Received request to add employee: {}", employeeDTO.getEmail());
-        return service.addEmployee(employeeDTO);
+        return employeeService.addEmployee(employeeDTO);
     }
 
+    // Get All Employees - Delegates to Service Layer
     @GetMapping
     public List<EmployeeDTO> getAllEmployees() {
         logger.info("Received request to fetch all employees.");
-        return service.getAllEmployees();
+        return employeeService.getAllEmployees();
     }
 }

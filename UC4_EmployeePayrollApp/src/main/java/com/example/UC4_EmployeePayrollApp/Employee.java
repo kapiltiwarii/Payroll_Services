@@ -1,4 +1,4 @@
-package com.example.UC3_EmployeePayrollApp;
+package com.example.UC4_EmployeePayrollApp;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -23,8 +23,7 @@ public class Employee {
     private String email;
 
     // Default Constructor
-    public Employee() {
-    }
+    public Employee() {}
 
     // Parameterized Constructor
     public Employee(String name, double salary, String email) {
@@ -34,35 +33,15 @@ public class Employee {
     }
 
     // Getters and Setters
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getName() {
-        return name;
-    }
+    public double getSalary() { return salary; }
+    public void setSalary(double salary) { this.salary = salary; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 }

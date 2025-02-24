@@ -1,4 +1,4 @@
-package com.example.UC3_EmployeePayrollApp;
+package com.example.UC4_EmployeePayrollApp;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,21 +16,26 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository repository;
 
+    // Business Logic: Add Employee
     public EmployeeDTO addEmployee(EmployeeDTO employeeDTO) {
         logger.info("Adding new employee: {}", employeeDTO.getName());
 
+        // Creating Model from DTO
         Employee employee = new Employee();
         employee.setName(employeeDTO.getName());
         employee.setSalary(employeeDTO.getSalary());
         employee.setEmail(employeeDTO.getEmail());
 
+        // Saving Employee
         Employee savedEmployee = repository.save(employee);
 
         logger.info("Employee added successfully: {}", savedEmployee.getId());
 
+        // Returning DTO
         return new EmployeeDTO(savedEmployee.getName(), savedEmployee.getSalary(), savedEmployee.getEmail());
     }
 
+    // Business Logic: Get All Employees
     public List<EmployeeDTO> getAllEmployees() {
         logger.info("Fetching all employees...");
 

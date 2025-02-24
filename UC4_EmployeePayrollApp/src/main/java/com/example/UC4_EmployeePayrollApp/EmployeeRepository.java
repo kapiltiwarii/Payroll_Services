@@ -1,4 +1,4 @@
-package com.example.UC3_EmployeePayrollApp;
+package com.example.UC4_EmployeePayrollApp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
