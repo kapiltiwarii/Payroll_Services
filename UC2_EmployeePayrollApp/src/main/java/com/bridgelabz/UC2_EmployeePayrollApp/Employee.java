@@ -1,4 +1,4 @@
-package com.bridgelabz.EmployeePayrollApp;
+package com.bridgelabz.UC2_EmployeePayrollApp;
 
 import jakarta.persistence.*;
 
