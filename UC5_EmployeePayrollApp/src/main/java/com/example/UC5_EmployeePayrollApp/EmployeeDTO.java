@@ -1,16 +1,9 @@
-package com.example.UC4_EmployeePayrollApp;
+package com.example.UC5_EmployeePayrollApp;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-@Entity
-@Table(name = "employees")
-public class Employee {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class EmployeeDTO {
 
     @NotBlank(message = "Name cannot be empty")
     private String name;
@@ -19,23 +12,19 @@ public class Employee {
 
     @NotBlank(message = "Email cannot be empty")
     @Email(message = "Invalid email format")
-    @Column(unique = true)
     private String email;
 
     // Default Constructor
-    public Employee() {}
+    public EmployeeDTO() {}
 
     // Parameterized Constructor
-    public Employee(String name, double salary, String email) {
+    public EmployeeDTO(String name, double salary, String email) {
         this.name = name;
         this.salary = salary;
         this.email = email;
     }
 
     // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 

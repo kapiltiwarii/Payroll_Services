@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>UC4_EmployeePayrollApp</artifactId>
+	<artifactId>UC5_EmployeePayrollApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>UC4_EmployeePayrollApp</name>
+	<name>UC5_EmployeePayrollApp</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
